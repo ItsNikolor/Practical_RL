@@ -1,7 +1,8 @@
 # This code is shamelessly stolen from
 # https://github.com/openai/baselines/blob/master/baselines/deepq/replay_buffer.py
-import numpy as np
 import random
+
+import numpy as np
 
 
 class ReplayBuffer(object):
@@ -34,10 +35,13 @@ class ReplayBuffer(object):
         for i in idxes:
             data = self._storage[i]
             obs_t, action, reward, obs_tp1, done = data
-            obses_t.append(np.array(obs_t, copy=False))
-            actions.append(np.array(action, copy=False))
+            obses_t.append(np.asarray(obs_t))
+            actions.append(np.asarray(action))
+            # obses_t.append(np.array(obs_t, copy=False))
+            # actions.append(np.array(action, copy=False))
             rewards.append(reward)
-            obses_tp1.append(np.array(obs_tp1, copy=False))
+            obses_tp1.append(np.asarray(obs_tp1))
+            # obses_tp1.append(np.array(obs_tp1, copy=False))
             dones.append(done)
         return (
             np.array(obses_t),
