@@ -1,3 +1,9 @@
+<video controls width="720">
+  <source src="videos/rl-video-episode-1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
 ## Materials
 * [__slides__](https://github.com/yandexdataschool/Practical_RL/files/15286337/ysda_practical_rl_lecture_04.pdf)
 * Our [lecture](https://yadi.sk/i/Gd9yWV1dpuB7BQ), [seminar](https://yadi.sk/i/mvtKAIRN2yKU2g) (russian)
